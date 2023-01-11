@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 2</title>
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="style.css" rel="stylesheet"/>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row border-top px-xl-5">
+            <div class="col-lg-9">
+                <a href="index.html"><h1 class="m-0"><span class="text-primary">Dark</span>Medo</h1></a>
+            </div>
+        </div>
+    </div>
+    <h1>Lecture 2 - Models and DB stuffs</h1>
+    <h2>Data Model </h2>
+    <p class="def">An integrated collection of concepts for describing and manipulating data,relationships between data, and constraints on</p>
+    <h3>A data model can be thought of as comprising three components:</h3>
+    <p>(1) a structural part<br>(2) a manipulative part<br>(3) set of integrity constraints,<br><span class="criti">ensures that the data is accurate.</span> </p>
+    <h3>Data models in the literature fall into three categories :</h3>
+    <ol>
+        <li>Object-based  (describe data at the conceptual and external levels).</li>
+        <li>Record-based  (describe data at the conceptual and external levels).</li>
+        <li>Physical data model (describe data at the internal level).</li>
+    </ol>
+    <h2>Object-Based Data Models : </h2>
+    <p>■ Object-based data models use concepts such as <span class="criti">entities, attributes, and relationships</span>.</p>
+    <p>■ <span class="criti">entity</span> is a distinct object (a person, place,thing, concept, event) in the organization that is to be represented in the database.</p>
+    <p>■ <span class="criti">attribute</span> is a property that describes some aspect of the object that we wish to record.</p>
+    <p>■ <span class="criti">relationship</span> is an association between entities.</p>
+    <h3>Types of object-based data models : </h3>
+    <ul>
+        <li>Entity–Relationship</li>
+        <li>Semantic</li>
+        <li>Functional</li>
+        <li>Object-Oriented.</li>
+    </ul>
+    <h2>Record-Based Data Models</h2>
+    <p>...In a record-based model the database consists of a number of <span class="criti">ﬁxed-format records </span>possibly of differing types.<br> Each record type deﬁnes a ﬁxed number of ﬁelds.</p>
+    <h3>Types of record based logical data model :</h3>
+    <ul>
+        <li>relational data model.</li>
+        <li>network data model.</li>
+        <li>hierarchical data model.</li>
+    </ul>
+    <h2>Physical Data Models</h2>
+    <p>-Physical data models describe how data is stored in the computer.<br>representing information such as record structures,record orderings, and access paths.</p>
+    <p><span class="criti">* the most common Physical data models being are the unifying model frame.</span></p>
+    
+    <hr>
+    
+    <h2>Three Schema</h2>
+    <img src="schema.png" width="500">
+    <h3>External or view level :</h3>
+    <p>describes that part of the database that is relevant to each user.</p>
+    <p>the external view includes only those entities,
+        attributes, and relationships in the ‘real world’ that the user is interested in.</p>
+
+    <h3>Conceptual level : </h3>
+    <p>Describes where data is stored in the database and the relationships among them.</p>
+    <p><span class="criti">This level contains the logical structure of the entire database as seen by the DBA.</span></p>
+    <h3>The conceptual level represents :</h3>
+    <p>■ all entities, their attributes, and their relationships;<br>
+        ■ the constraints on the data;<br>
+        ■ semantic information about the data.<br>
+        ■ security and integrity information.</p>
+
+    <h3>Internal level : </h3>
+    <p>The physical representation of the database on the computer.<br>This level describes how the data is stored in the database.</p>
+    <h3>The internal level is concerned with such things as :</h3>
+    <ul>
+        <li>storage space allocation for data and indexes.</li>
+        <li>record descriptions for storage.</li>
+        <li>record placement.</li>
+        <li>data compression and data encryption techniques.</li>
+    </ul>
+
+    <hr>
+
+    <h2>Schemas, Mappings, and Instances</h2>
+    <p>The overall description of the database is called the <span class="criti">Database Schema</span>.</p>
+    <p>The DBMS is responsible for mapping between these three types of schema.</p>
+    <p>The conceptual schema is related to the internal schema through a conceptual/internal mapping.
+        <br>■ This enables the DBMS to ﬁnd the actual record or
+        combination of records in physical storage that
+        constitute a logical record in the conceptual schema,
+        together with any constraints to be enforced on the
+        operations for that logical record. <br>■ It also allows any
+        di erences in entity names, attribute names, attribute
+        order, data types, and so on, to be resolved. Finally,
+        each external schema is related to the conceptual
+        schema by the external/conceptual mapping.<br>■ This
+        enables the DBMS to map names in the user’s view
+        on to the relevant part of the conceptual schema.</p>
+    <img src="schema2.png" width="500">
+    <p>-The data in the database at any particular point in time is called a<span class="criti"> database instance</span>.</p>
+    <p>-The schema is sometimes called the <span class="criti">intension</span> of the database.<br>while an
+        instance is called an <span class="criti">extension (or state)</span> of the database.</p>
+
+    <hr>
+    <h2>Data Independence</h2>
+    <h3>Physical data independence :</h3>
+    <p>refers to the immunity
+        of the conceptual schema to changes in the internal schema.</p>
+
+    <hr>
+    <h1>DBMS Languages</h1>
+    <p>A data <span class="criti">Sublanguage</span> consists of two parts :</p>
+    <p>1) Data Deﬁnition Language (DDL),,specify the database</p>
+    <p>2) Data Manipulation Language (DML),,used to both read and update the database.</p>
+    <h2>
+        DML
+    </h2>
+    <p class="def">A language that provides a set of operations to support the basic data manipulation operations on the data held in database.</p>
+
+    <h3>Types of DML :</h3>
+    <p>1\ Procedural DML.          2\ non-Procedural DML.</p>
+    <h3>Q) What is The difference between Procedural and non-Procedural DML :</h3>
+    <p>A) 1-procedural languages specify how the output of a DML statement is to be obtained, while nonprocedural DMLs describe only what output is to be obtained.<br>2-Typically,
+        procedural languages treat records individually, whereas nonprocedural languages operate on sets of records.</p>
+
+    <h2>Procedural DML :</h2>
+    <p class="def">A language that allows the user to tell the system what data is needed and exactly how to retrieve the data.</p>
+    <h2>non-Procedural DML :</h2>
+    <p class="def">A language that allows the user to state what data is needed rather than how it is to be retrieved</p>
+
+    <a href="lec3.html"><button>Next Lecture</button></a>
+    <hr>
+    <p class="def">I am <span class="criti">Ahmed Almostafa</span> , if you find this article usefull; pray for me</p>
+</body>
+</html>
